@@ -6,6 +6,7 @@ This project implements an AI system for Flappy Bird using a **NEAT** (NeuroEvol
 
 ## Key Features
 
+![Training Demo](Assets/trainingBird.gif)
 ### AI Training Process
 - Spawns a population of AI birds with randomly initialized neural networks.
 - Evaluates each bird's performance over multiple cycles to compute **fitness** (survival and progress through pipes).
@@ -13,9 +14,11 @@ This project implements an AI system for Flappy Bird using a **NEAT** (NeuroEvol
 - Training continues until a bird achieves a predefined fitness threshold.
 - Saves the best-performing AI brain for use in gameplay.
 
+![Battle Demo](Assets/battleBird.gif)
 ### Player vs AI Mode
 - Players can compete against pre-trained AI birds at different difficulty levels.
-![Training Demo](Assets/watchingBird.gif)
+- 
+![Watching Demo](Assets/watchingBird.gif)
 ### Watching Mode
 - Observe AI birds trained through NEAT to evaluate and compare performance.
 
