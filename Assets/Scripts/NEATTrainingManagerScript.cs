@@ -144,7 +144,7 @@ public class NEATTrainingManager : MonoBehaviour, IGameModeManager
 
     void SaveBird(BirdAIScript bird)
     {
-        string path = Application.dataPath + "/Models/BestBird.json";
+        string path = Application.streamingAssetsPath + "/Models/BestBird.json";
         Debug.Log(bird.brain);
         string json = JsonUtility.ToJson(bird.brain);
         System.IO.File.WriteAllText(path, json);

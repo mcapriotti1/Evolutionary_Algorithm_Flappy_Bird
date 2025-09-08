@@ -152,6 +152,7 @@ public class LogicScript : MonoBehaviour
         if (watchScoreText != null) watchScoreText.text = "Score: 0";
         HideWatchScreen();
         ResetForAI();
+        ResetPipes();
         activeManager?.SpawnBestBird();
     }
 

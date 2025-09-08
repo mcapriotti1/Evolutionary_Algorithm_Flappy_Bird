@@ -14,7 +14,7 @@ public class PlayerVsAIBattleManager : MonoBehaviour, IGameModeManager
     public Button Hard;
     public GameObject BattleSelectionScreen;
 
-    private string path = Application.dataPath;
+    private string path = Application.streamingAssetsPath ;
     private BirdScript playerBird;
     private BirdAIScript aiBird;
 
@@ -37,21 +37,21 @@ public class PlayerVsAIBattleManager : MonoBehaviour, IGameModeManager
     // ---- Loading Various Models -----
     public void EasyClick()
     {
-        path = Application.dataPath + "/Models/EasyBird.json";
+        path = Application.streamingAssetsPath + "/Models/EasyBird.json";
         if (BattleSelectionScreen != null) BattleSelectionScreen.SetActive(false);
         StartBattle(); 
     }
 
     public void MediumClick()
     {
-        path = Application.dataPath + "/Models/MediumBird.json";
+        path = Application.streamingAssetsPath + "/Models/MediumBird.json";
         if (BattleSelectionScreen != null) BattleSelectionScreen.SetActive(false);
         StartBattle(); 
     }
 
     public void HardClick()
     {
-        path = Application.dataPath + "/Models/HardBird.json";
+        path = Application.streamingAssetsPath + "/Models/HardBird.json";
         if (BattleSelectionScreen != null) BattleSelectionScreen.SetActive(false);
         StartBattle(); 
     }

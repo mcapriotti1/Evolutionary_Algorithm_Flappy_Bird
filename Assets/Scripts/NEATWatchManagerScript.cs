@@ -22,7 +22,7 @@ public class NEATWatchManager : MonoBehaviour, IGameModeManager
     public void SpawnBestBird()
     {
         watchingMode = true;
-        string path = Application.dataPath + "/models/HardBird.json";
+        string path = Application.streamingAssetsPath + "/models/HardBird.json";
         BirdBrain brain = LoadBird(path);
 
         GameObject b = Instantiate(birdPrefab, Vector3.zero, Quaternion.identity);
@@ -34,9 +34,6 @@ public class NEATWatchManager : MonoBehaviour, IGameModeManager
         ai.fitness = 0f;
 
         birds.Add(ai);
-
-        LogicScript logic = Object.FindFirstObjectByType<LogicScript>();
-        logic?.ResetPipes();
     }
 
     void Update()

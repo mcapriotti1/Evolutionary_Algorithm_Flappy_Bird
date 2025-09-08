@@ -2248,10 +2248,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   birdPrefab: {fileID: 760062285715395984, guid: 6847f4525ab85f743952145b4137a94b, type: 3}
   populationSize: 50
-  fitnessThreshold: 0.1
+  fitnessThreshold: 10
   evaluationsPerBird: 5
   speed: 1
-  maxFitness: 1
+  maxFitness: 20
   redoButton: {fileID: 1211893128}
   birds: []
 --- !u!4 &879245105
