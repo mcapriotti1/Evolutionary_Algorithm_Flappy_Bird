@@ -15,7 +15,7 @@ This project implements an AI system for Flappy Bird using a **NEAT** (NeuroEvol
 
 ### Player vs AI Mode
 - Players can compete against pre-trained AI birds at different difficulty levels.
-![Training Demo](Assets/training_demo.gif)
+![Training Demo](Assets/watchingBird.gif)
 ### Watching Mode
 - Observe AI birds trained through NEAT to evaluate and compare performance.
 
