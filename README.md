@@ -27,3 +27,18 @@ The flappy bird game was created using script to spawn and move pipes at randomi
 ### Player vs AI Mode
 - Players can compete against pre-trained AI birds at different difficulty levels.
 ![Battle Demo](Assets/Images/battleBird.gif)
+
+
+## Running Instructions
+
+### 1. Clone the Repository  
+```bash
+git clone https://github.com/mcapriotti1/Evolutionary_Algorithm_Flappy_Bird.git
+cd Evolutionary_Algorithm_Flappy_Bird
+```
+
+### 2. Open in Unity
+
+Make sure you have Unity Hub and Unity 6.2 installed.
+Open Unity Hub → Click “Add Project” → Select the cloned folder.
+Once loaded, open the Scenes folder and select MainScene.unity to run the project.
