@@ -1,43 +1,29 @@
-# Flappy Bird AI – NEAT Training in Unity
+# Evolutionary_Algorithm_Flappy_Bird
 
-This project implements an AI system for Flappy Bird using a **NEAT** (NeuroEvolution of Augmenting Topologies) inspired algorithim to train the neural network. The AI learns to play by evolving over generations, improving its performance through **mutation, selection, and elitism**.
+A Unity game which uses a custom **Evolutionary Algorithm** to optimize a nueral network that plays Flappy Bird. The user has the abilities to **Train, Watch, and Play Against** the AI.
 
 ---
 
-## Key Features
+## About the Project
 
-### AI Training Process
-- Spawns a population of AI birds with randomly initialized neural networks.
-- Evaluates each bird's performance over multiple cycles to compute **fitness** (survival and progress through pipes).
-- Uses **elitism** to retain top performers and **mutation** to generate new behaviors for the next generation.
-- Training continues until a bird achieves a predefined fitness threshold.
-- Saves the best-performing AI brain for use in gameplay.
+**Tech Used:** Unity (C#), NEAT, JsonUtility
+
+### Training Bird
+The flappy bird game was created using script to spawn and move pipes at randomized offsets and a basic action map for the players input (jump). The AI uses a NeuroEvolution of Augmenting Topologies (NEAT) inspired system to train the bird. The nueral network has 4 inputs, (bird Y position, velocity, and horizontal/vertical distance to the next pipe), 5 hidden nodes, and 1 output for the flap decision, with a hyperbolic tangent (tanh) activation function. Started training by creating  population of 50 birds each with a neural network of randomized weights and biases. Fitness is calculted based on time survive on average over 5 cycles (to account for various pipe formations). The top 10 birds automatically transfer to the next generation, while the remaining 40 mutate with a 20% change frequency and 20% change amount for each weight/bias. Training continues until a bird's average fitness over 5 cycles reaches the fitness threshold (an early stopping threshold was implemented to limit computation time if the bird never dies). The choices for the population, cycles, fitness threshold, and change frequency/amount are arbitrary, and slight deviations should yield similar results.
+
+### Game Features
+3 modes are available, the training, watching, and playing mode. 3 saved bird models "EasyBird.json", "MediumBird.json", and "HardBird.json" are saved within StreamingAssets to run the various modes. Also interface was implemented in order to make running the various modes easier. The training mode visualizes the birds throughout the training proccess and displays basic information. Once training completes, the bird is saved in StreamingAssets as "BestBird.json". The watch mode loads "HardBird.json" and lets the user watch the bird (sometimes birds may die immediately in Watching Mode, this appears to be a bug that has not yet been identified). The playing bird implements both the AI bird and player mode and loads the bird with the chosen difficulty.
+
+# Demos
+
+### Training Mode
+- Train AI birds (specifications can be set in Unity)
 ![Training Demo](Assets/Images/trainingBird.gif)
 
+### Watching Mode
+- Observe AI birds trained through NEAT to evaluate performance.
+![Watching Demo](Assets/Images/watchBird.gif)
 
 ### Player vs AI Mode
 - Players can compete against pre-trained AI birds at different difficulty levels.
 ![Battle Demo](Assets/Images/battleBird.gif)
-
-### Watching Mode
-- Observe AI birds trained through NEAT to evaluate and compare performance.
-![Watching Demo](Assets/Images/watchBird.gif)
-
----
-
-## Training Highlights
-- **Population-based evolution**: Multiple AI birds are trained simultaneously to maximize learning efficiency.
-- **Fitness averaging**: Birds are evaluated over several cycles to ensure consistent performance before evolving.
-- **Early stopping**: Training can end early if a bird reaches a high fitness, saving computation time.
-- **Neural network mutation**: Both weights and biases are mutated at a controlled rate to explore new behaviors.
-- **Persistent brains**: Best-performing neural networks are saved as JSON files for later use.
-
----
-
-## Technical Details
-- **Neural Network Structure**: 4 inputs → 5 hidden → 1 output  
-- **Inputs**: Bird Y position, velocity, distance to next pipe (horizontal & vertical)  
-- **Output**: Flap decision  
-- **Activation Function**: Hyperbolic tangent (`tanh`)  
-- **Programming**: Unity (C#), `JsonUtility` for saving/loading networks  
-- **Optimization**: Adjustable time scale for faster training
