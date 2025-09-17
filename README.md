@@ -1,6 +1,6 @@
 # Evolutionary_Algorithm_Flappy_Bird
 
-A Unity game which uses a custom **Evolutionary Algorithm** to optimize a nueral network that plays Flappy Bird. The user has the abilities to **Train, Watch, and Play Against** the AI.
+A Unity (C#) game which uses a custom **Evolutionary Algorithm** to optimize a nueral network that plays Flappy Bird. The user has the abilities to **Train, Watch, and Play Against** the AI.
 
 ---
 
